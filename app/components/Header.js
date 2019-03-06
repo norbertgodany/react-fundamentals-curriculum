@@ -1,7 +1,19 @@
 const React = require('react');
 
-const Header = () => (
-  <h1>Header.js header</h1>
-)
+class Header extends React.Component {
+  render() {
+    return (
+      <header>
+        <div className="wrapper">
+          <h1>Know Your Weather</h1>
+          <form className="form-weather">
+            <input className="weather-input" placeholder="Barcelona"></input>
+            <button formMethod="">Get Weather</button>
+          </form>
+        </div>
+      </header>
+    )
+  }
+}
 
 module.exports = Header
