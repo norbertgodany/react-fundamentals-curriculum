@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    font-family: 'Montserrat', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.container {
+    background: linear-gradient(#e66465, #7666f5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.container h2 {
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.container .form-weather input {
+    margin-bottom: 10px;
+}
+
+.form-weather {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+.weather-input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    border-radius: 3px;
+    height: 30px;
+    padding: 15px 15px 15px 10px;
+    outline: none;
+    border: none;
+    width: 30vw;
+    transition: box-shadow 0.1s ease;
+}
+
+.weather-input:focus {
+    box-shadow: inset 0 0 0 2px #580dd2;
+}
+
+.form-weather button {
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    background: #580dd2;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    padding: 15px;
+    transition: background 0.5s ease;
+}
+
+.form-weather button:hover {
+    background: #804cd4;
+}
+
+.form-weather button:focus {
+    outline: none;
+}
+
+@media (max-width: 960px) {
+    .weather-input {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .weather-input {
+        width: 75vw;
+    }
+}
