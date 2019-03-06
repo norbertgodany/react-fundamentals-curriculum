@@ -1,6 +1,7 @@
 const React = require('react');
 
 const Header = require('./Header')
+const WeatherForm = require('./WeatherForm')
 
 class App extends React.Component {
   render() {
@@ -9,10 +10,7 @@ class App extends React.Component {
         <Header />
         <div className="container">
           <h2>Enter a City</h2>
-          <form className="form-weather">
-            <input className="weather-input" placeholder="Barcelona"></input>
-            <button formMethod="">Get Weather</button>
-          </form>
+          <WeatherForm />
         </div>
       </React.Fragment>
     )

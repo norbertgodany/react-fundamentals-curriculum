@@ -1,15 +1,15 @@
 const React = require('react');
 
+const WeatherForm = require('./WeatherForm')
+
 class Header extends React.Component {
+
   render() {
     return (
       <header>
         <div className="wrapper">
           <h1>Know Your Weather</h1>
-          <form className="form-weather">
-            <input className="weather-input" placeholder="Barcelona"></input>
-            <button formMethod="">Get Weather</button>
-          </form>
+          <WeatherForm />
         </div>
       </header>
     )
