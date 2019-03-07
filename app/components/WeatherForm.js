@@ -1,6 +1,8 @@
 const React = require('react')
+const { withRouter } = require('react-router')
 
-const {getCityWeather} = require('../utils/api')
+const { getCityWeather } = require('../utils/api')
+const { getForecast } = require('../utils/api')
 
 class WeatherForm extends React.Component {
   constructor(props) {
@@ -27,7 +29,8 @@ class WeatherForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault()
 
-    getCityWeather(this.state.cityname).then(console.log)
+    //getCityWeather(this.state.cityname).then(console.log)
+    this.props.history.push(`/forecast/${this.state.cityname}`)
   }
 
   render() {
@@ -45,7 +48,7 @@ class WeatherForm extends React.Component {
           onChange={this.handleChange}
         >
         </input>
-        <button formMethod="">Get Weather</button>
+        <button>Get Weather</button>
       </form>
     )
   }

@@ -1,7 +1,13 @@
 const React = require('react');
 
+const ReactRouter = require("react-router-dom");
+const Router = ReactRouter.BrowserRouter;
+const Route = ReactRouter.Route;
+const Switch = ReactRouter.Switch;
+
 const Header = require('./Header')
-const WeatherForm = require('./WeatherForm')
+const Home = require('./Home')
+const Forecast = require('./Forecast')
 
 class App extends React.Component {
   render() {
@@ -9,8 +15,10 @@ class App extends React.Component {
       <React.Fragment>
         <Header />
         <div className="container">
-          <h2>Enter a City</h2>
-          <WeatherForm />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/forecast/:cityname" component={Forecast} />
+          </Switch>
         </div>
       </React.Fragment>
     )
